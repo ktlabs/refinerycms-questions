@@ -21,9 +21,13 @@
                   :confirm => t('shared.admin.delete.message', :title => @question.name),
                   :method => :delete %>
     </li>
+    <li>
+      <%= link_to t('.back_to_show'), edit_admin_question_path(@question), :class => "back_icon" %>
+    </li>
   </ul>
 </div>
 <div id='records'>
+  <%= form_for @question, :url => { :action => 'add_answer' }, :method => 'put' do |f| %>
   <h2><%= t('.question') %></h2>
   <table id='question'>
     <tr>
@@ -69,13 +73,14 @@
       </td>
     </tr>
     <tr>
-      <td valign='top'>
+      <td>
         <strong><%= t('.answer') %></strong>
       </td>
       <td>
-        <%= simple_format @question.answer, :style => 'margin-top: 0' %>
+        <%= f.text_area :answer, :rows => 8 %>
       </td>
     </tr>
   </table>
-  <%= button_to t('.add_answer'), edit_admin_question_path(@question), :method => 'get' %>
+  <%= f.submit t('.send') %>
+  <% end %>
 </div>

@@ -37,6 +37,26 @@ ru:
         phone: Телефон
         date: Дата
         message: Сообщение
+        answer: Ответ
+        add_answer: Добавить ответ
+        back_to_show: Назад к вопросу
+      show:
+        details: Подробности
+        age: Срок
+        actions: Действия
+        back_to_all_questions: Назад ко всем запросам
+        spam: Спам
+        spam_yes: да
+        question: Запрос
+        to: Кому
+        from: От
+        click_to_email: Нажмите, чтобы отправить письмо
+        phone: Телефон
+        date: Дата
+        message: Сообщение
+        answer: Ответ
+        send: Сохранить ответ
+        back_to_show: Назад к вопросу
     question_settings:
       notification_recipients_form:
         question_settings_value_name: Отправлять уведомления
@@ -73,3 +93,4 @@ ru:
         email: Эл. почта
         phone: Телефон
         message: Сообщение
+        answer: Ответ

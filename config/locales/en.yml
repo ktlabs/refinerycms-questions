@@ -37,6 +37,26 @@ en:
         phone: Phone
         date: Date
         message: Message
+        answer: Answer
+        add_answer: Add answer
+        back_to_show: Back to question
+      edit:
+        details: Details
+        age: Age
+        actions: Actions
+        back_to_all_questions: Back to all questions
+        spam: Spam
+        spam_yes: 'yes'
+        question: Question
+        to: To
+        from: From
+        click_to_email: Click to email this address
+        phone: Phone
+        date: Date
+        message: Message
+        answer: Answer
+        send: Save answer
+        back_to_show: Back to question
     question_settings:
       notification_recipients_form:
         question_settings_value_name: Send notifications to
@@ -73,3 +93,4 @@ en:
         email: Email
         phone: Phone
         message: Message
+        answer: Answer

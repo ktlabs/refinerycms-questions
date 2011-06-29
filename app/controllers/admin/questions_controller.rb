@@ -24,6 +24,12 @@ class Admin::QuestionsController < Admin::BaseController
     redirect_to :back
   end
 
+  def add_answer
+    find_question
+    @question.answer = params[:question][:answer]
+    @question.save
+    render :action => 'show'
+  end
 protected
 
   def find_all_ham
