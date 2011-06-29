@@ -1,0 +1,10 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <span class="preview">Q: <%= truncate(strip_tags(question.message), :length => 30) -%></span>
+    <span class="preview">A: <%= truncate(strip_tags(question.answer), :length => 30) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('zoom.png'), question_url(question),
+                :title => t('.read_question') -%>
+  </span>
+</li>
