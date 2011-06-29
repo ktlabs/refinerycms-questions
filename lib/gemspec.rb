@@ -7,14 +7,14 @@ end
 
 gemspec = <<EOF
 Gem::Specification.new do |s|
-  s.name              = %q{refinerycms-inquiries}
+  s.name              = %q{refinerycms-questions}
   s.version           = %q{#{version}}
   s.date              = %q{#{Time.now.strftime('%Y-%m-%d')}}
-  s.summary           = %q{Inquiry handling functionality for the Refinery CMS project.}
-  s.description       = %q{Inquiry handling functionality extracted from Refinery CMS to allow you to have a contact form and manage inquiries in the Refinery backend.}
-  s.homepage          = %q{http://refinerycms.com}
-  s.email             = %q{info@refinerycms.com}
-  s.authors           = ["Resolve Digital"]
+  s.summary           = %q{QA handling functionality for the Refinery CMS project.}
+  s.description       = %q{Question handling functionality extracted from Refinery CMS, broadened by answer, to allow you to have a contact form and manage QA in the Refinery backend.}
+  s.homepage          = %q{http://ktlabs.ru}
+  s.email             = %q{hello@ktlabs.ru}
+  s.authors           = ["ktlabs"]
   s.require_paths     = %w(lib)
 
   s.files             = [
@@ -26,4 +26,4 @@ Gem::Specification.new do |s|
 end
 EOF
 
-File.open(File.expand_path("../../refinerycms-inquiries.gemspec", __FILE__), 'w').puts(gemspec)
+File.open(File.expand_path("../../refinerycms-questions.gemspec", __FILE__), 'w').puts(gemspec)

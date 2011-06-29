@@ -1,4 +1,4 @@
-class Inquiry < ActiveRecord::Base
+class Question < ActiveRecord::Base
 
   filters_spam :message_field => :message,
                :email_field => :email,

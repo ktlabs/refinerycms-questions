@@ -1,6 +1,6 @@
 ::User.find(:all).each do |user|
-  if user.plugins.where(:name => 'refinery_inquiries').blank?
-    user.plugins.create(:name => "refinery_inquiries",
+  if user.plugins.where(:name => 'refinery_questions').blank?
+    user.plugins.create(:name => "refinery_questions",
                         :position => (user.plugins.maximum(:position) || -1) +1)
   end
 end if defined?(::User)
@@ -9,9 +9,9 @@ if defined?(::Page)
   page_position = (::Page.maximum(:position, :conditions => {:parent_id => nil}) || -1)
 
   contact_us_page = ::Page.create({
-    :title => "Contact",
-    :link_url => "/contact",
-    :menu_match => "^/(inquiries|contact).*$",
+    :title => "qa",
+    :link_url => "/qa",
+    :menu_match => "^/(questions|qa).*$",
     :deletable => false,
     :position => (page_position += 1)
   })
@@ -29,15 +29,15 @@ if defined?(::Page)
 
   thank_you_page = contact_us_page.children.create({
     :title => "Thank You",
-    :link_url => "/contact/thank_you",
-    :menu_match => "^/(inquiries|contact)/thank_you$",
+    :link_url => "/qa/thank_you",
+    :menu_match => "^/(questions|qa)/thank_you$",
     :show_in_menu => false,
     :deletable => false,
     :position => (contact_us_page_position += 1)
   })
   thank_you_page.parts.create({
     :title => "Body",
-    :body => "<p>We've received your inquiry and will get back to you with a response shortly.</p><p><a href='/'>Return to the home page</a></p>",
+    :body => "<p>We've received your question and will get back to you with a response shortly.</p><p><a href='/'>Return to the home page</a></p>",
     :position => 0
   })
 

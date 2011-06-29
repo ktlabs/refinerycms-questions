@@ -1,17 +1,17 @@
 en-GB:
   plugins:
-    refinery_inquiries:
+    refinery_questions:
       title: Enquiries
       description: Provides a contact form and stores enquiries
-  inquiries:
+  questions:
     new:
       send: Send message
       privacy_policy: We value your privacy
   admin:
-    inquiries:
+    questions:
       delete: Remove this enquiry forever
-      inquiry:
-        read_inquiry: Read the enquiry
+      question:
+        read_question: Read the enquiry
         said: said
         mark_as_spam: Mark as spam
         mark_as_ham: Move to inbox
@@ -21,25 +21,25 @@ en-GB:
         update_notified: Update who gets notified
         edit_confirmation_email: Edit confirmation email
       index:
-        no_inquiries: You have not received any enquiries yet.
+        no_questions: You have not received any enquiries yet.
         no_spam: Hooray! You don't have any spam.
       show:
         details: Details
         age: Age
         actions: Actions
-        back_to_all_inquiries: Back to all Enquiries
+        back_to_all_questions: Back to all Enquiries
         spam: Spam
         spam_yes: 'yes'
-        inquiry: Enquiry
+        question: Enquiry
         to: To
         from: From
         click_to_email: Click to email this address
         phone: Phone
         date: Date
         message: Message
-    inquiry_settings:
+    question_settings:
       notification_recipients_form:
-        inquiry_settings_value_name: Send notifications to
+        question_settings_value_name: Send notifications to
         hint: When a new enquiry is submitted, Refinery will send an email notification to you.
         example: "Enter your email address(es) like: jack@work.com, jill@office.com"
       confirmation_email_form:
@@ -49,15 +49,15 @@ en-GB:
         click_to_edit_subject: Click here to edit the subject
         explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the enquiry with the person who made it.
         below_edit_email_sent: Below you can edit the email that is sent out.
-        the_customer_making_inquiry: The customer making the enquiry
+        the_customer_making_question: The customer making the enquiry
         message: Message
         note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
-  inquiry_mailer:
+  question_mailer:
     notification:
       greeting: Hi there
-      you_recieved_new_inquiry: You just received a new enquiry on your website.
-      inquiry_starts: --- enquiry starts ---
-      inquiry_ends: --- enquiry ends ---
+      you_recieved_new_question: You just received a new enquiry on your website.
+      question_starts: --- enquiry starts ---
+      question_ends: --- enquiry ends ---
       from: From
       email: Email
       phone: Phone
@@ -66,9 +66,9 @@ en-GB:
       ps: P.S. All your enquiries are stored in the "Enquiries" section of Refinery should you ever want to view it later there.
   activerecord:
     models:
-      inquiry: inquiry
+      question: question
     attributes:
-      inquiry:
+      question:
         name: Name
         email: Email
         phone: Phone

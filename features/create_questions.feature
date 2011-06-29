@@ -1,13 +1,13 @@
-@refinerycms @inquiries @inquiries-create
-Feature: Create Inquiries
+@refinerycms @questions @questions-create
+Feature: Create questions
   In order to contact the website owner
-  I want to create an inquiry
+  I want to create an question
 
   Background:
     Given A Refinery user exists
-    And I have no inquiries
-    And I have a page titled "Contact Us" with a custom url "/contact"
-    And I have a page titled "Thank You" with a custom url "/contact/thank_you"
+    And I have no questions
+    And I have a page titled "Contact Us" with a custom url "/qa"
+    And I have a page titled "Thank You" with a custom url "/qa/thank_you"
 
   Scenario: Contact page
     When I go to the contact page
@@ -16,7 +16,7 @@ Feature: Create Inquiries
     And I should see "Phone"
     And I should see "Message *"
 
-  Scenario: Create a valid inquiry
+  Scenario: Create a valid question
     When I go to the contact page
     And I fill in "Name *" with "Philip"
     And I fill in "Email *" with "phil@refinerycms.com"
@@ -24,9 +24,9 @@ Feature: Create Inquiries
     And I press "Send"
     Then I should be on the contact thank you page
     And I should see "Thank You"
-    And I should have 1 inquiries
+    And I should have 1 questions
 
-  Scenario: Create an invalid inquiry
+  Scenario: Create an invalid question
     When I go to the contact page
     And I press "Send"
     Then I should be on the contact create page
@@ -35,4 +35,4 @@ Feature: Create Inquiries
     And I should see "Email is invalid"
     And I should not see "Phone can't be blank"
     And I should see "Message can't be blank"
-    And I should have 0 inquiries
+    And I should have 0 questions

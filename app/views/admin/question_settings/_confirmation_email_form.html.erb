@@ -6,13 +6,13 @@
   <p>
     <%= t('.below_edit_email_sent') %>
   </p>
-  <table id='inquiry'>
+  <table id='question'>
     <tr>
       <td>
         <label class='stripped'><%= t('.to') %></label>
       </td>
       <td>
-        <%= t('.the_customer_making_inquiry') %>
+        <%= t('.the_customer_making_question') %>
       </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@
           <label class='stripped'><%= t('.subject') %> (<%= locale.to_s %>)</label>
         </td>
         <td>
-          <%= text_field_tag "subject[][#{locale.to_s}]", InquirySetting.confirmation_subject(locale),
+          <%= text_field_tag "subject[][#{locale.to_s}]", QuestionSetting.confirmation_subject(locale),
                              :class => 'widest' %>
         </td>
       </tr>
@@ -39,7 +39,7 @@
                       :class => 'stripped' %> (<%= locale.to_s %>)
         </td>
         <td>
-          <%= text_area_tag "message[][#{locale.to_s}]",  InquirySetting.confirmation_message(locale), # required, we can't use :value
+          <%= text_area_tag "message[][#{locale.to_s}]",  QuestionSetting.confirmation_message(locale), # required, we can't use :value
                           :rows => "5",
                           :class => 'widest' %>
           <br/>
@@ -53,7 +53,7 @@
              :locals => {
                :f => f,
                :continue_editing => false,
-               :cancel_url => admin_inquiries_url,
+               :cancel_url => admin_questions_url,
                :hide_delete => true
              } %>
 <% end %>
