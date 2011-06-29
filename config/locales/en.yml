@@ -7,6 +7,13 @@ en:
     new:
       send: Send message
       privacy_policy: We value your privacy
+    show:
+      actions: Actions
+      back_to_all_questions: Back to all questions
+      question: Question
+      date: Date
+      message: Message
+      answer: Answer
   admin:
     questions:
       delete: Remove this question forever

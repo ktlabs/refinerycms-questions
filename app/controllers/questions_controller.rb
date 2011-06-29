@@ -8,6 +8,8 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+    @questions = Question.with_answers
+    @questions = @questions.paginate({:page => params[:page]})
   end
 
   def create
@@ -32,6 +34,10 @@ class QuestionsController < ApplicationController
     else
       render :action => 'new'
     end
+  end
+
+  def show
+    @question = Question.find(params[:id])
   end
 
 protected

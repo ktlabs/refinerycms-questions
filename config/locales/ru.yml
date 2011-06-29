@@ -7,6 +7,13 @@ ru:
     new:
       send: Отправить сообщение
       privacy_policy: Мы относимся с уважением к вашим личным данным
+    show:
+      actions: Действия
+      back_to_all_questions: Назад ко всем запросам
+      question: Запрос
+      date: Дата
+      message: Вопрос
+      answer: Ответ
   admin:
     questions:
       delete: Удалить этот запрос навсегда
@@ -36,7 +43,7 @@ ru:
         click_to_email: Нажмите, чтобы отправить письмо
         phone: Телефон
         date: Дата
-        message: Сообщение
+        message: Вопрос
         answer: Ответ
         add_answer: Добавить ответ
         back_to_show: Назад к вопросу

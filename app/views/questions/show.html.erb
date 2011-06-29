@@ -1,0 +1,37 @@
+<div id='actions'>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_questions'), questions_path, :class => "back_icon" %>
+    </li>
+  </ul>
+</div>
+<div id='records'>
+  <h2><%= t('.question') %></h2>
+  <table id='question'>
+    <tr>
+      <td>
+        <strong><%= t('.date') %></strong>
+      </td>
+      <td>
+        <%= l(Date.parse(@question.created_at.to_s), :format => :long) %>
+      </td>
+    </tr>
+    <tr>
+      <td valign='top'>
+        <strong><%= t('.message') %></strong>
+      </td>
+      <td>
+        <%= simple_format @question.message, :style => 'margin-top: 0' %>
+      </td>
+    </tr>
+    <tr>
+      <td valign='top'>
+        <strong><%= t('.answer') %></strong>
+      </td>
+      <td>
+        <%= simple_format @question.answer, :style => 'margin-top: 0' %>
+      </td>
+    </tr>
+  </table>
+</div>
