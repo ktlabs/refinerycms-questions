@@ -14,6 +14,8 @@ class Question < ActiveRecord::Base
 
   default_scope :order => 'created_at DESC' # previously scope :newest
 
+  scope :with_answers, where("answer IS NOT NULL AND answer != ''")
+  
   def self.latest(number = 7, include_spam = false)
     include_spam ? limit(number) : ham.limit(number)
   end

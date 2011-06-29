@@ -1,0 +1,13 @@
+<% content_for :body_content_left do %>
+  <div class='questions'>
+    <% if questions.any? %>
+      <%= will_paginate questions %>
+      <ul>
+        <%= render :partial => "question", :collection => questions %>
+      </ul>
+      <%= will_paginate questions %>
+    <% else %>
+      <p><%= t('shared.admin.search.no_results') %></p>
+    <% end %>
+  </div>
+<% end %>

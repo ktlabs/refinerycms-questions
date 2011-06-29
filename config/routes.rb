@@ -1,7 +1,7 @@
 Refinery::Application.routes.draw do
   get '/qa', :to => 'questions#new', :as => 'new_question'
   resources :qa,
-            :only => :create,
+            :only => [:create, :show],
             :as => :questions,
             :controller => 'questions' do
     collection do
