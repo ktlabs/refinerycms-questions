@@ -10,7 +10,7 @@ class Question < ActiveRecord::Base
   validates :message, :presence => true
   validates :email, :format=> { :with =>  /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
 
-  acts_as_indexed :fields => [:name, :email, :message, :phone]
+  acts_as_indexed :fields => [:name, :email, :message, :phone, :answer]
 
   default_scope :order => 'created_at DESC' # previously scope :newest
 
