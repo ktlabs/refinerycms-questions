@@ -8,12 +8,12 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
-    @questions = Question.with_answers
-    @questions = @questions.paginate({:page => params[:page]})
+    @questions = Question.with_answers.paginate({:page => params[:page]})
   end
 
   def create
     @question = Question.new(params[:question])
+    @questions = Question.with_answers.paginate({:page => params[:page]})
 
     if @question.save
       if @question.ham?
