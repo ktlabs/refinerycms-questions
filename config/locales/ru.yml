@@ -1,8 +1,8 @@
 ru:
   plugins:
     refinery_questions:
-      title: Запросы
-      description: Предоставляет форму обратной связи и хранит запросы
+      title: Вопрос-ответ
+      description: Предоставляет форму отправки вопроса и позволяет задавать на них ответы 
   questions:
     new:
       send: Отправить сообщение
