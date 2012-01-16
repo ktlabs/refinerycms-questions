@@ -1,4 +1,14 @@
 <%= javascript_include_tag 'lib/jquery-1.5.2.min', 'application' %>
+<%= render :partial => "list", :locals => { :questions => @questions } %>
+<% content_for :body_content_right do %>
+  <div class='questions'>
+    <%=raw @page.content_for(Page.default_parts.first.to_sym) %>
+
+
+  </div>
+<% end %>
+<%= render :partial => "/shared/content_page" %>
+
 <div class="container two-cols aside-wide">
 				<div class="article-wrapper">
 					<div class="aside-wrapper">

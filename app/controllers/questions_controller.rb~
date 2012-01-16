@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
         end
       end
 
-      redirect_to url_for(:action => 'new')
+      redirect_to thank_you_questions_url
     else
       render :action => 'new'
     end
